@@ -83,9 +83,9 @@ Penelitian terdahulu dalam prediksi diabetes banyak menggunakan pendekatan klasi
 | `GenHlth`                 | Kategorikal   | Penilaian umum kesehatan oleh individu (skala 1–5; 1 = sangat baik, 5 = sangat buruk).           |
 | `PhysHlth`                | Numerik       | Jumlah hari dalam 30 hari terakhir ketika kesehatan fisik kurang baik.                          |
 | `DiffWalk`                | Numerik       | Kesulitan berjalan atau naik tangga (1: ya, 0: tidak).                                           |
-| `Age`                     | Kategorikal   | Kategori usia (misal: 1 = 18–24, 2 = 25–29, ..., 13 = 80+).                                      |
-| `Education`               | Kategorikal   | Tingkat pendidikan (1 = tidak tamat SD, 6 = sarjana atau lebih).                                 |
-| `Income`                  | Kategorikal   | Tingkat pendapatan tahunan rumah tangga (1 = <\$10k, 8 = >\$75k).                               |
+| `Age`                     | Kategorikal   | Kategori usia.                                      |
+| `Education`               | Kategorikal   | Tingkat pendidikan.                                 |
+| `Income`                  | Kategorikal   | Tingkat pendapatan tahunan rumah tangga.                               |
 
 ### 3.3 Struktur Data
 
