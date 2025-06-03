@@ -99,21 +99,29 @@ Penelitian terdahulu dalam prediksi diabetes banyak menggunakan pendekatan klasi
 
 - Seleksi fitur menggunakan `SelectKBest` dengan fungsi `f_classif`
 ![image](https://github.com/user-attachments/assets/2e892595-fb74-4956-830f-4b0f98ea07c1)
-1. fitur `education` berdasarkan informasi dataset dengan referensi  BRFSS 2015
-| Kode | Tingkat Pendidikan                                                                  |   |
-| ---- | ----------------------------------------------------------------------------------- | - |
-| 1    | Tidak menyelesaikan sekolah dasar (kurang dari kelas 9)                             |   |
-| 2    | Menyelesaikan sekolah dasar (kelas 9–11, tanpa ijazah SMA)                          |   |
-| 3    | Lulus SMA atau memiliki GED (General Educational Development)                       |   |
-| 4    | Beberapa kuliah atau sekolah kejuruan, tanpa gelar                                  |   |
-| 5    | Lulus dari perguruan tinggi dua tahun (Associate degree)                            |   |
-| 6    | Lulus dari perguruan tinggi empat tahun atau lebih (Sarjana, Magister, atau Doktor) |   |
-3. fitur `income` berdasarkan informasi dataset dengan referensi  BRFSS 2015 namun disesuaikan dengan demografis indonesia
-| BRFSS Income Code | Kategori Sosial Ekonomi (Indonesia)     | Keterangan Lokal                            | Kode |
-| ----------------- | --------------------------------------- | ------------------------------------------- |-------------------|
-| 1 – 2             | **Rendah (Lower Class)**                | Rentan miskin, pekerjaan informal           | 1
-| 3 – 5             | **Menengah (Middle Class)**             | Gaji UMR ke atas, pekerja tetap/karyawan    | 2
-| 6 – 8             | **Tinggi (Upper-Middle to High Class)** | Profesional, pengusaha, ekspatriat, pejabat | 3
+1. Berdasarkan dokumentasi BRFSS 2015, fitur education mengindikasikan tingkat pendidikan terakhir yang diselesaikan oleh responden. Kategorinya adalah sebagai berikut:
+
+| Kode | Tingkat Pendidikan                                                                  |
+| ---- | ----------------------------------------------------------------------------------- |
+| 1    | Tidak menyelesaikan sekolah dasar (kurang dari kelas 9)                             |
+| 2    | Menyelesaikan sekolah dasar (kelas 9–11, tanpa ijazah SMA)                          |
+| 3    | Lulus SMA atau memiliki GED (General Educational Development)                       |
+| 4    | Beberapa kuliah atau sekolah kejuruan, tanpa gelar                                  |
+| 5    | Lulus dari perguruan tinggi dua tahun (Associate Degree)                            |
+| 6    | Lulus dari perguruan tinggi empat tahun atau lebih (Sarjana, Magister, atau Doktor) |
+
+Tingkat pendidikan ini dapat memengaruhi pengetahuan dan perilaku terkait kesehatan, termasuk pemahaman terhadap pola makan dan gaya hidup yang berisiko terhadap diabetes.
+
+3. Fitur income dalam dataset BRFSS mengukur tingkat pendapatan tahunan. Untuk menyesuaikan dengan demografi dan konteks sosial ekonomi Indonesia, rentang kode BRFSS dikelompokkan ulang sebagai berikut:
+
+| Kode BRFSS | Kategori Sosial Ekonomi (Indonesia)     | Keterangan Lokal                                | Kode Baru |
+| ---------- | --------------------------------------- | ----------------------------------------------- | --------- |
+| 1 – 2      | **Rendah (Lower Class)**                | Rentan miskin, pekerjaan informal               | 1         |
+| 3 – 5      | **Menengah (Middle Class)**             | Gaji setara UMR ke atas, pekerja tetap/karyawan | 2         |
+| 6 – 8      | **Tinggi (Upper-Middle to High Class)** | Profesional, pengusaha, pejabat, ekspatriat     | 3         |
+
+Klasifikasi ulang ini membantu dalam membuat interpretasi model yang lebih relevan dengan konteks lokal, khususnya dalam memahami hubungan antara status ekonomi dan risiko kesehatan seperti diabetes.
+
 - Korelasi visual menggunakan heatmap seaborn
 ![image](https://github.com/user-attachments/assets/232e1ae5-719b-468a-934a-d51448044644)
 
